@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from .models import Recipe, RecipeCategory, Category
+from random import choice
 
-# Create your views here.
+
+def home(request):
+    home_recipes = []
+    recipes = Recipe.objects.all()
+    for _ in range():
+        home_recipes.append()
+    return render(request, 'recipes/home.html', context={'content': message})

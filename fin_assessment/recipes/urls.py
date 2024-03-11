@@ -1,7 +1,6 @@
-from django.shortcuts import render, get_object_or_404
-from .models import Recipe, RecipeCategory, Category
+from django.urls import path
+from . import views
 
-
-def index(request):
-    message = 'Welcome to ShopApp'
-    return render(request, 'recipes/index.html', context={'content': message})
+urlpatterns = [
+    path('', views.home, name="home"),
+]
